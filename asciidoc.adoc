@@ -462,11 +462,11 @@ include::chapter1.txt[tabsize=4]
 ==== Conditional Macros
 ifdef::foo[]
 Hi there
-endif::<attribute>[]
+endif::foo[]
 
 ifndef::foo[]
 Hi there
-endif::<attribute>[]
+endif::foo[]
 
 ifdef::revnumber[Version number 42]
 
