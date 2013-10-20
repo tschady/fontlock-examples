@@ -1,0 +1,575 @@
+= Document Title
+Firstname Lastname <flast@example.org>
+v1.0, Oct 2013:
+Test comment here
+
+:variableOne: first answer
+:variableTwo: second part
+
+== Headers, Top Level
+=== Header Two
+==== Header Three
+===== Header Four
+
+Header 1
+--------
+
+Header 2
+~~~~~~~~
+
+Header 3
+^^^^^^^^
+
+Header 4
+++++++++
+
+[float]
+The second day
+~~~~~~~~~~~~~~
+
+[[terms]]
+[glossary]
+List of Terms
+-------------
+
+["glossary",id="terms"]
+List of Terms
+-------------
+
+[template="glossary",id="terms"]
+List of Terms
+-------------
+
+== Text Formatting
+=== Quoted Text
+
+Lorem ipsum _emphasis_ predicate
+Lorem ipsum 'emphasis2' predicate
+__Unconstrained, long example of emphasis__
+
+This is a *strong* word in a sentence
+Here's some other **Unconstraind, bolded text** stuff
+good example of unconstrained for partial: **F**ile to use
+
+surrounding +monospace+ text
+here's some normal and here's some ++Unconstrained monospace++ right there.
+or a more `literal text included here` example
+
+``double quote''
+Here's some #unquoted text# there too.
+##Unconstrained, long unquoted text##
+
+[red]#Test for color#
+[big red yellow-background]#Very Obvious#
+[underline]#Underline text#
+[overline]#overline text#
+
+Some variable substitution {foo}
+Second variable here {bar} for this
+
+// Comment line
+// Comment line the second
+
+=== Superscripts and Subscripts
+
+This is a ^superscript^ in line
+Some ~subtext~ here
+This line contains both e^&#960;i^+1 = 0. H~2~O and x^10^. Some ^super text^ and ~some sub text~
+
+=== Linebreaks
+
+linebreak +
+
+=== Pagebreaks
+
+pagebreak
+<<<
+
+=== Rulers
+
+'''
+
+=== Tabs
+		tabs are		8 spaces
+
+=== Replacements
+
+(C) copyright, (TM) trademark, (R) registered trademark,
+-- em dash, ... ellipsis, -> right arrow, <- left arrow, => right
+double arrow, <= left double arrow.
+
+&#x278a; &#182;
+
+
+== BlockId Element 
+
+[[chapter-titles]]
+Chapter titles can be ...
+
+<<chapter-titles,chapter titles>>.
+
+== Paragraphs
+
+=== Normal paragraphs
+
+This is the first sentence, here's
+the paragraph, hard left to the margin.
+
+=== Literal Paragraphs
+
+		Consul *necessitatibus* per id,
+		consetetur, eu pro everti postulant
+		homero verear ea mea, qui.
+
+[literal]
+Consul *necessitatibus* per id,
+consetetur, eu pro everti postulant
+homero verear ea mea, qui.
+
+=== Quote and Verse
+[verse, William Blake, from Auguries of Innocence]
+To see a world in a grain of sand,
+And a heaven in a wild flower,
+Hold infinity in the palm of your hand,
+And eternity in an hour.
+
+[quote, Bertrand Russell, The World of Mathematics (1956)]
+A good notation has subtlety and suggestiveness which at times makes
+it almost seem like a live teacher.
+
+=== Adminition Paragraphs
+NOTE: This is an example note.
+
+IMPORTANT: Example important text
+
+[NOTE]
+This is an example note.
+
+== Delimited Blocks
+
+=== Listing Block
+
+.Listing
+--------------------------
+#include <stdio.h>
+
+int main() {
+   printf("Hello World!\n");
+   exit(0);
+}
+--------------------------
+
+=== Literal Blocks
+
+.Literal
+..........................
+Consul *necessitatibus* per id,
+consetetur, eu pro everti postulant
+homero verear ea mea, qui.
+..........................
+
+=== Sidebar Blocks
+.Sidebar
+**************************
+Any AsciiDoc SectionBody element (apart from
+SidebarBlocks) can be placed inside a sidebar.
+**************************
+
+=== Comment Blocks
+.Comment
+//////////////////////////
+CommentBlock contents are not processed by
+asciidoc(1).
+//////////////////////////
+
+=== Passthrough Blocks
+[subs="quotes"]
+++++++++++++++++++++++++++++++++++++++
+<table border="1"><tr>
+  <td>*Cell 1*</td>
+  <td>*Cell 2*</td>
+</tr></table>
+++++++++++++++++++++++++++++++++++++++
+
+=== Quote blocks
+.Quote
+[quote, Sir Arthur Conan Doyle, The Adventures of Sherlock Holmes]
+____________________________________________________________________
+As he spoke there was the sharp sound of horses' hoofs and
+grating wheels against the curb, followed by a sharp pull at the
+bell. Holmes whistled.
+
+"A pair, by the sound," said he. "Yes," he continued, glancing
+out of the window. "A nice little brougham and a pair of
+beauties. A hundred and fifty guineas apiece. There's money in
+this case, Watson, if there is nothing else."
+____________________________________________________________________
+
+=== Example blocks
+[caption="Example 1: "]
+.An example with a custom caption
+=====================================================================
+Qui in magna commodo, est labitur dolorum an. Est ne magna primis
+adolescens.
+=====================================================================
+
+=== Admonition blocks
+[NOTE]
+.A NOTE admonition block
+=====================================================================
+Qui in magna commodo, est labitur dolorum an. Est ne magna primis
+adolescens.
+
+. Fusce euismod commodo velit.
+. Vivamus fringilla mi eu lacus.
+  .. Fusce euismod commodo velit.
+  .. Vivamus fringilla mi eu lacus.
+. Donec eget arcu bibendum
+  nunc consequat lobortis.
+=====================================================================
+
+=== Open blocks
+
+[abstract]
+--
+Lorum ipsum ...
+--
+
+== Lists
+
+=== Bulletted lists
+
+- List item.
+* List item.
+** List item.
+*** List item.
+**** List item.
+***** List item.
+
+=== Numbered lists
+
+1.   Arabic (decimal) numbered list item.
+a.   Lower case alpha (letter) numbered list item.
+F.   Upper case alpha (letter) numbered list item.
+iii) Lower case roman numbered list item.
+IX)  Upper case roman numbered list item.
+
+
+. Arabic (decimal) numbered list item.
+.. Lower case alpha (letter) numbered list item.
+... Lower case roman numbered list item.
+.... Upper case alpha (letter) numbered list item.
+..... Upper case roman numbered list item.
+
+- Praesent eget purus quis magna eleifend eleifend.
+  1. Fusce euismod commodo velit.
+    a. Fusce euismod commodo velit.
+    b. Vivamus fringilla mi eu lacus.
+    c. Donec eget arcu bibendum nunc consequat lobortis.
+  2. Vivamus fringilla mi eu lacus.
+    i)  Fusce euismod commodo velit.
+    ii) Vivamus fringilla mi eu lacus.
+  3. Donec eget arcu bibendum nunc consequat lobortis.
+  4. Nam fermentum mattis ante.
+- Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+  * Fusce euismod commodo velit.
+  ** Qui in magna commodo, est labitur dolorum an. Est ne magna primis
+     adolescens. Sit munere ponderum dignissim et. Minim luptatum et
+     vel.
+  ** Vivamus fringilla mi eu lacus.
+  * Donec eget arcu bibendum nunc consequat lobortis.
+- Nulla porttitor vulputate libero.
+  . Fusce euismod commodo velit.
+  . Vivamus fringilla mi eu lacus.
+[upperroman]
+    .. Fusce euismod commodo velit.
+    .. Vivamus fringilla mi eu lacus.
+  . Donec eget arcu bibendum nunc consequat lobortis.
+
+[options="compact"]
+- Compact list item.
+- Another compact list item.
+
+[start=7]
+. List item 7.
+. List item 8.
+
+=== Labeled lists
+In::
+Lorem::
+  Fusce euismod commodo velit.
+
+  Fusce euismod commodo velit.
+
+Ipsum:: Vivamus fringilla mi eu lacus.
+  * Vivamus fringilla mi eu lacus.
+  * Donec eget arcu bibendum nunc consequat lobortis.
+Dolor::
+  Donec eget arcu bibendum nunc consequat lobortis.
+  Suspendisse;;
+    A massa id sem aliquam auctor.
+  Morbi;;
+    Pretium nulla vel lorem.
+  In;;
+    Dictum mauris in urna.
+    Vivamus::: Fringilla mi eu lacus.
+    Donec:::   Eget arcu bibendum nunc consequat lobortis.
+
+[horizontal]
+*Lorem*:: Fusce euismod commodo velit.  Qui in magna commodo, est
+labitur dolorum an. Est ne magna primis adolescens.
+
+  Fusce euismod commodo velit.
+
+*Ipsum*:: Vivamus fringilla mi eu lacus.
+- Vivamus fringilla mi eu lacus.
+- Donec eget arcu bibendum nunc consequat lobortis.
+
+*Dolor*::
+  - Vivamus fringilla mi eu lacus.
+  - Donec eget arcu bibendum nunc consequat lobortis.
+
+=== Q and A lists
+[qanda]
+Question one::
+        Answer one.
+Question two::
+        Answer two.
+
+=== Glossary lists
+[glossary]
+A glossary term::
+    The corresponding definition.
+A second glossary term::
+    The corresponding definition.
+
+=== Bibliography lists
+[bibliography]
+.Optional list title
+- [[[taoup]]] Eric Steven Raymond. 'The Art of UNIX
+  Programming'. Addison-Wesley. ISBN 0-13-142901-9.
+- [[[walsh-muellner]]] Norman Walsh & Leonard Muellner.
+  'DocBook - The Definitive Guide'. O'Reilly & Associates.
+  1999. ISBN 1-56592-580-7.
+
+=== List item continuation
+1. List item one.
++
+List item one continued with a second paragraph followed by an
+Indented block.
++
+.................
+$ ls *.sh
+$ mv *.sh ~/tmp
+.................
++
+List item continued with a third paragraph.
+
+2. List item two continued with an open block.
++
+--
+This paragraph is part of the preceding list item.
+
+a. This list is nested and does not require explicit item continuation.
++
+This paragraph is part of the preceding list item.
+
+b. List item b.
+
+This paragraph belongs to item two of the outer list.
+--
+
+== Footnotes
+
+A footnote footnote:[An example footnote.];
+a second footnote with a reference ID footnoteref:[note2,Second footnote.];
+finally a reference to the second footnote footnoteref:[note2].
+
+== Indices
+
+(((<primary>,<secondary>,<tertiary>)))
+
+== Callouts
+
+.MS-DOS directory listing
+ -----------------------------------------------------
+ 10/17/97   9:04         <DIR>    bin
+ 10/16/97  14:11         <DIR>    DOS            <1>
+ 10/16/97  14:40         <DIR>    Program Files
+ 10/16/97  14:46         <DIR>    TEMP
+ 10/17/97   9:04         <DIR>    tmp
+ 10/16/97  14:37         <DIR>    WINNT
+ 10/16/97  14:25             119  AUTOEXEC.BAT   <2>
+  2/13/94   6:21          54,619  COMMAND.COM    <2>
+ 10/16/97  14:25             115  CONFIG.SYS     <2>
+ 11/16/97  17:17      61,865,984  pagefile.sys
+  2/13/94   6:21           9,349  WINA20.386     <3>
+ -----------------------------------------------------
+
+ <1> This directory holds MS-DOS.
+ <2> System startup code for DOS.
+ <3> Some sort of Windows 3.1 hack.
+
+== Macros
+=== Inline macros
+
+==== URLs
+http://www.docbook.org/[DocBook.org]
+http://www.docbook.org/
+mailto:joe.bloggs@foobar.com[email Joe Bloggs]
+joe.bloggs@foobar.com
+
+==== Internal Cross References
+[[<id>,<xreflabel>]]
+anchor:<id>[<xreflabel>]
+<<<id>,<caption>>>
+xref:<id>[<caption>]
+
+[[tiger_image]]
+.Tyger tyger
+image::tiger.png[]
+This can be seen in <<tiger_image>>.
+
+==== Linking to local documents
+link:downloads/foo.zip[download foo.zip]
+
+==== Images
+image:images/logo.png["Company Logo",height=32]
+image::images/logo.png[scaledwidth="75%",alt="Company Logo"]
+image::images/tiger.png["Tiger image",align="left"]
+
+=== Block Macros
+==== Block Identifier
+[[X30]]
+[id="X30"]
+
+==== Images
+.Main circuit board
+[caption="Figure 2: "]
+image::images/layout.png[J14P main circuit board]
+
+==== Comments
+
+// Comment line
+
+// Comment block
+// Continuation
+
+=== System Macros
+==== Include Macros
+include::chapter1.txt[tabsize=4]
+
+==== Conditional Macros
+ifdef::foo[]
+Hi there
+endif::<attribute>[]
+
+ifndef::foo[]
+Hi there
+endif::<attribute>[]
+
+ifdef::revnumber[Version number 42]
+
+==== Executable system macros
+------------------
+sys::[ls -l *.txt]
+------------------
+
+==== Template System Macro
+[admonitionparagraph]
+template::[admonitionblock]
+
+=== Passthrough macros
+
+pass:[<q>To be or not to be</q>]
+pass:attributes,quotes[<u>the '{author}'</u>]
+Red [red]+++`sum_(i=1)\^n i=(n(n+1))/2`$+++ AsciiMathML formula
+$$`[[a,b],[c,d]]((n),(k))`$$
+
+== HTML5
+
+audio::images/example.ogg[]
+
+video::gizmo.ogv[width=200,options="nocontrols,autoplay"]
+
+.Example video
+video::gizmo.ogv[]
+
+video::http://www.808.dk/pics/video/gizmo.ogv[]
+
+++++
+<video poster="pics/video/gizmo.jpg" id="video" style="cursor: pointer;" >
+  <source src="pics/video/gizmo.mp4" />
+  <source src="pics/video/gizmo.webm" type="video/webm" />
+  <source src="pics/video/gizmo.ogv" type="video/ogg" />
+  Video not playing? <a href="pics/video/gizmo.mp4">Download file</a> instead.
+</video>
+
+<script type="text/javascript">
+  var video = document.getElementById('video');
+  video.addEventListener('click',function(){
+    video.play();
+  },false);
+</script>
+++++
+
+== Tables
+
+=== Example tables
+[width="15%"]
+|=======
+|1 |2 |A
+|3 |4 |B
+|5 |6 |C
+|=======
+
+.An example table
+[width="50%",cols=">s,^m,e",frame="topbot",options="header,footer"]
+|==========================
+|      2+|Columns 2 and 3
+|1       |Item 1  |Item 1
+|2       |Item 2  |Item 2
+|3       |Item 3  |Item 3
+|4       |Item 4  |Item 4
+|footer 1|footer 2|footer 3
+|==========================
+
+.Windtrainer workouts
+[width="80%",cols="3,^2,^2,10",options="header"]
+|=========================================================
+|Date |Duration |Avg HR |Notes
+
+|22-Aug-08 |10:24 | 157 |
+Worked out MSHR (max sustainable heart rate) by going hard
+for this interval.
+
+|22-Aug-08 |23:03 | 152 |
+Back-to-back with previous interval.
+
+|24-Aug-08 |40:00 | 145 |
+Moderately hard interspersed with 3x 3min intervals (2min
+hard + 1min really hard taking the HR up to 160).
+
+|=========================================================
+
+[format="csv",cols="^1,4*2",options="header"]
+|===================================================
+ID,Customer Name,Contact Name,Customer Address,Phone
+include::customers.csv[]
+|===================================================
+
+[cols="e,m,^,>s",width="25%"]
+|============================
+|1 >s|2 |3 |4
+^|5 2.2+^.^|6 .3+<.>m|7
+^|8
+|9 2+>|10
+|============================
+
+== Mathematical formulas
+
+=== Latex math
+latexmath:[$C = \alpha + \beta Y^{\gamma} + \epsilon$]
+
+=== AsciiMath
+asciimath:[`x/x={(1,if x!=0),(text{undefined},if x=0):}`]
